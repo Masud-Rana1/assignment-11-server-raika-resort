@@ -23,7 +23,6 @@ async function run() {
     const itemsCollection = database.collection("items");
     // GET API
 
-
     app.get("/items", async(req, res)=>{
         const cursor = itemsCollection.find({});
         const items = await cursor.toArray();
